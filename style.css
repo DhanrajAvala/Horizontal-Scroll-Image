@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    background: #191919;
+}
+
+
+.gallery{
+    width: 900px;
+    display: flex;
+    /* 2nd step ek row me 3 photos ajayga fir usko scroll karene tho baki sab aayga  */
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    /* ek row me 3 photo dikana hai  */
+    grid-template-columns: auto auto auto;  
+    grid-gap: 20px;
+    padding: 10px;
+    /* 1st step sare photos ek row me ajayaa */
+    flex: none;
+}
+
+.gallery div img{
+    width: 100%;
+    
+}
+.gallery div img:hover{
+  transform: scale(1.1);
+  transition: transform 0.7s;
+}
+
+/* scrollbar ko hide kardya */
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%auto;
+}
+
+#backbtn, #nextbtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
